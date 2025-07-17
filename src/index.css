@@ -1,0 +1,188 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+/* Custom Styles */
+body {
+  margin: 0;
+  padding: 0;
+  /* Add a soft, abstract gradient background */
+  background: linear-gradient(135deg, #232526 0%, #414345 100%), url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  background-blend-mode: overlay;
+  font-family: 'Inter', sans-serif;
+  color: #F2F2E9;
+  line-height: 1.7;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.glass {
+  background: rgba(31, 41, 55, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+.glass-header {
+  background: rgba(31, 41, 55, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.glass-header.scrolled {
+  background: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.highlight {
+  color: #7DD6C0;
+}
+.section {
+  padding: 5rem 1rem;
+}
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding: 7rem 4rem;
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Toast Animation */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+@keyframes cube-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+.animate-cube-float {
+  animation: cube-float 5s ease-in-out infinite;
+}
+/* Remove glow from cube grid */
+.cube-anim polygon {
+  stroke: #2de39a;
+  stroke-width: 1.2;
+  fill: none;
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: cube-trail 2.8s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+@keyframes cube-trail {
+  0% { stroke-dashoffset: 180; }
+  20% { stroke-dashoffset: 120; }
+  40% { stroke-dashoffset: 60; }
+  60% { stroke-dashoffset: 0; }
+  80% { stroke-dashoffset: 60; }
+  100% { stroke-dashoffset: 180; }
+}
+.cube-anim .cube-point {
+  fill: #2de39a;
+  opacity: 0.5;
+  animation: cube-point-trail 2.8s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+@keyframes cube-point-trail {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.cube-trail {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  opacity: 0.8;
+  animation: cube-trail-anim 4.2s ease-in-out infinite;
+}
+.cube-point {
+  fill: #7DD6C0;
+  opacity: 0.4;
+  animation: cube-point-anim 4.2s ease-in-out infinite;
+}
+@keyframes cube-trail-anim {
+  0% { stroke-dashoffset: 180; opacity: 0.8; }
+  10% { opacity: 1; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  90% { opacity: 1; }
+  100% { stroke-dashoffset: 180; opacity: 0.8; }
+}
+@keyframes cube-point-anim {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.delay-1 { animation-delay: 0.5s !important; }
+.delay-2 { animation-delay: 1s !important; }
+.delay-3 { animation-delay: 1.5s !important; }
+.delay-4 { animation-delay: 2s !important; }
+.delay-5 { animation-delay: 2.5s !important; }
+.delay-6 { animation-delay: 3s !important; }
+
+/* Toast Animation */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+/* Hamburger Menu Animations */
+@keyframes spin-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.animate-spin-in {
+  animation: spin-in 0.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
