@@ -1,15 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { GlassCard } from '../../common/GlassCard';
 import { Button } from '../../common/Button';
-import { MailIcon, Smartphone, MapPinIcon, SendIcon, Github, Facebook, Instagram, Linkedin, Twitter, Youtube, Globe } from 'lucide-react';
+import { MailIcon, Smartphone, MapPinIcon, SendIcon, Github, Facebook, Instagram, Linkedin, Twitter, Youtube, Globe, X, Music } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const socials = [
   { icon: <Github size={22} />, link: 'https://github.com/Ampexqt', label: 'GitHub' },
   { icon: <Linkedin size={22} />, link: 'https://www.linkedin.com/in/rueda-jhon-harold-m-5585aa375/', label: 'LinkedIn' },
-  { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg>, link: 'https://x.com/johnharoldrueda', label: 'X (Twitter)' },
+  { icon: <X size={22} />, link: 'https://x.com/johnharoldrueda', label: 'X (Twitter)' },
   { icon: <Instagram size={22} />, link: 'https://instagram.com/ampexxqt', label: 'Instagram' },
-  { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4-4 4 4 0 0 0-4 4z"/><path d="M15 8a4 4 0 1 0-4 4"/><path d="M12 12v8"/><path d="M8 20h8"/></svg>, link: 'https://www.tiktok.com/@ampexqt', label: 'TikTok' },
+  { icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>, link: 'https://www.tiktok.com/@ampexqt', label: 'TikTok' },
 ];
 
 // Enhanced Toast Component - Matching Download CV style
