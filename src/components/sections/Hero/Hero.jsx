@@ -13,31 +13,31 @@ export const Hero = () => {
 
   return (
     <section id="home" className="section min-h-screen flex items-center relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-2 sm:px-4">
+        <div className="max-w-full sm:max-w-2xl">
           {/* Greeting */}
-          <p className="text-[#7DD6C0] text-lg md:text-xl font-semibold mb-3 tracking-wide">Hello, I'm</p>
+          <p className="text-[#7DD6C0] text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 tracking-wide">Hello, I'm</p>
           {/* Name */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-2 break-words">
             Jhon Harold Rueda
           </h1>
           {/* Role */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#F2F2E9] mb-6 tracking-tight">
+          <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F2F2E9] mb-4 sm:mb-6 tracking-tight break-words">
             Web Developer
           </h2>
           {/* Description */}
-          <p className="text-base md:text-lg text-[#d1d5db] mb-10 max-w-2xl font-normal">
+          <p className="text-sm sm:text-base md:text-lg text-[#d1d5db] mb-6 sm:mb-10 max-w-full sm:max-w-2xl font-normal break-words">
             Passionate about continuous learning and contributing to open-source projects that support the developer community and beyond.
           </p>
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mb-8">
-            <Button primary onClick={scrollToProjects}>
+          <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8 w-full">
+            <Button primary onClick={scrollToProjects} className="w-full sm:w-auto justify-center">
               View My Work
               <ArrowRightIcon size={18} className="ml-2" />
             </Button>
           </div>
           {/* Social Icons - Inspired Style */}
-          <div className="flex flex-wrap gap-x-6 gap-y-3 mb-8 items-center text-[#b0b0b0]">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 sm:gap-x-6 sm:gap-y-3 mb-6 sm:mb-8 items-center text-[#b0b0b0] w-full">
             <a href="https://github.com/Ampexqt" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="flex items-center gap-1 hover:text-[#7DD6C0] transition-all duration-200 hover:scale-105">
               <Github size={18} /> <span className="hidden sm:inline text-sm font-medium">GitHub</span>
             </a>
@@ -86,8 +86,8 @@ export const Hero = () => {
             </a>
           </div>
           {/* 3D Cube Grid for small screens (below icons) - 7-cube pattern */}
-          <div className="block md:hidden w-full flex justify-center my-6">
-            <div className="w-[260px] h-[200px] sm:w-[320px] sm:h-[240px]">
+          <div className="block md:hidden w-full flex justify-center my-4 sm:my-6">
+            <div className="w-[180px] xs:w-[220px] sm:w-[260px] h-[120px] xs:h-[160px] sm:h-[200px]">
               <svg width="100%" height="100%" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Top Row - 4 cubes, leftmost faded */}
                 <g opacity="0.25">
@@ -172,7 +172,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* 3D Isometric Cube Grid - Refined with Trail Animation and Responsive */}
-          <div className="hidden md:block absolute right-10 top-1/4 pointer-events-none select-none z-0 w-[260px] h-[200px] md:w-[400px] md:h-[320px] lg:w-[520px] lg:h-[400px]">
+          <div className="hidden md:block absolute right-2 sm:right-10 top-1/4 pointer-events-none select-none z-0 w-[180px] sm:w-[260px] md:w-[400px] lg:w-[520px] h-[120px] sm:h-[200px] md:h-[320px] lg:h-[400px]">
             <svg width="100%" height="100%" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* Top Row - Cube 1 */}
               <g>

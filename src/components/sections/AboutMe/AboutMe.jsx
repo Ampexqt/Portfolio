@@ -63,69 +63,69 @@ export const AboutMe = () => {
         isVisible={showToast} 
         onClose={() => setShowToast(false)} 
       />
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+      <div className="container mx-auto px-2 sm:px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 text-center break-words">
           About <span className="highlight">Me</span>
         </h2>
-        <div className="glass p-8 md:p-16 rounded-2xl shadow-lg">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
+        <div className="glass p-4 sm:p-8 md:p-16 rounded-2xl shadow-lg">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-10 md:gap-16 w-full">
             {/* Profile Photo */}
-            <div className="flex-shrink-0 flex justify-center w-full md:w-auto">
+            <div className="flex-shrink-0 flex justify-center w-full md:w-auto mb-4 md:mb-0">
               <img
                 src={profileImg}
                 alt="Jhon Harold Rueda Portrait"
-                className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover shadow-lg border-4 border-surface"
+                className="rounded-full w-28 h-28 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-56 md:h-56 object-cover shadow-lg border-4 border-surface"
               />
             </div>
             {/* Info */}
-            <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col items-start">
+            <div className="flex-1 w-full max-w-full sm:max-w-xl md:max-w-2xl mx-auto flex flex-col items-start">
               {/* Personal Information Heading with Icon - Left Aligned and Highlighted */}
-              <div className="flex items-center gap-2 mb-4 w-full">
-                <User size={26} className="text-white" />
-                <span className="text-xl md:text-2xl font-extrabold text-white">Personal Information</span>
+              <div className="flex items-center gap-2 mb-3 sm:mb-4 w-full">
+                <User size={22} className="text-white" />
+                <span className="text-lg sm:text-xl md:text-2xl font-extrabold text-white">Personal Information</span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-extrabold mb-1 text-accent">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-1 text-accent break-words">
                 Jhon Harold Rueda
               </h3>
-              <p className="text-lg md:text-xl font-semibold text-text mb-1">
+              <p className="text-base sm:text-lg md:text-xl font-semibold text-text mb-1 break-words">
                 IT Student & Aspiring Programmer
               </p>
-              <p className="mb-8 text-base md:text-lg text-gray-300 font-normal max-w-xl">
+              <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg text-gray-300 font-normal max-w-full break-words">
                 I'm an IT student who loves building for the web and learning by doing. I enjoy tackling real-world challenges and continuously improving my skills through practical experience.
               </p>
-              <ul className="w-full flex flex-col gap-3 mb-8">
+              <ul className="w-full flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {details.map(({ icon, label, value }) => (
-                  <li key={label} className="flex items-center gap-3 text-base text-text">
-                    <span className="text-accent">{React.cloneElement(icon, { size: 20, className: 'text-accent' })}</span>
-                    <span className="font-medium min-w-[110px]">{label}:</span>
-                    <span className="font-normal">{value}</span>
+                  <li key={label} className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-base text-text break-all">
+                    <span className="text-accent">{React.cloneElement(icon, { size: 18, className: 'text-accent' })}</span>
+                    <span className="font-medium min-w-[90px] sm:min-w-[110px]">{label}:</span>
+                    <span className="font-normal break-all">{value}</span>
                   </li>
                 ))}
               </ul>
               {/* CV Download Button */}
-              <div className="w-full mb-8">
+              <div className="w-full mb-6 sm:mb-8">
                 <button
                   onClick={handleDownloadCV}
-                  className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border-2 border-accent text-accent font-semibold text-base bg-transparent hover:bg-accent hover:text-surface transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus-visible:outline-none focus:ring-0"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-lg border-2 border-accent text-accent font-semibold text-sm sm:text-base bg-transparent hover:bg-accent hover:text-surface transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none focus-visible:outline-none focus:ring-0 w-full sm:w-auto justify-center"
                 >
-                  <Download size={20} />
+                  <Download size={18} />
                   Download CV
                 </button>
               </div>
               {/* Interests */}
               <div className="w-full mt-2">
-                <div className="mb-2 text-text font-medium flex items-center gap-2">
+                <div className="mb-1 sm:mb-2 text-text font-medium flex items-center gap-2">
                   <span>Interests:</span>
                   <div className="flex-1 border-t border-surface"></div>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2">
+                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mt-2">
                   {interests.map(({ icon, label }) => (
                     <div
                       key={label}
-                      className="flex items-center gap-2 bg-surface/80 border border-surface px-3 py-2 rounded-lg shadow-sm text-sm font-medium text-text hover:bg-accent/80 hover:text-surface transition-colors"
+                      className="flex items-center gap-2 bg-surface/80 border border-surface px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg shadow-sm text-xs sm:text-sm font-medium text-text hover:bg-accent/80 hover:text-surface transition-colors w-full"
                     >
-                      <span className="text-accent">{React.cloneElement(icon, { size: 18, className: 'text-accent' })}</span>
-                      <span>{label}</span>
+                      <span className="text-accent">{React.cloneElement(icon, { size: 16, className: 'text-accent' })}</span>
+                      <span className="break-words">{label}</span>
                     </div>
                   ))}
                 </div>

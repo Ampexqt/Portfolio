@@ -63,7 +63,7 @@ const skillData = [
   { name: 'HTML5', icon: Html5Icon, category: 'Frontend', level: 'Beginner', description: 'Structured semantic markup for web apps.' },
   { name: 'CSS3', icon: Css3Icon, category: 'Frontend', level: 'Beginner', description: 'Styled responsive layouts and animations.' },
   { name: 'JavaScript', icon: JavascriptIcon, category: 'Frontend', level: 'Beginner', description: 'Added interactivity and dynamic content.' },
-  { name: 'React', icon: ReactIcon, category: 'Frontend', level: 'Intermediate', description: 'Built responsive UIs using React hooks and Tailwind CSS.' },
+  { name: 'React', icon: ReactIcon, category: 'Frontend', level: 'Beginner', description: 'Built responsive UIs using React hooks and Tailwind CSS.' },
   { name: 'Bootstrap', icon: BootstrapIcon, category: 'Frontend', level: 'Beginner', description: 'Quickly prototyped responsive layouts.' },
   { name: 'Tailwind CSS', icon: TailwindIcon, category: 'Frontend', level: 'Beginner', description: 'Utility-first CSS framework for rapid UI development.' },
   { name: 'Chart.js', icon: ChartjsIcon, category: 'Frontend', level: 'Beginner', description: 'Visualized data with interactive charts.' },
@@ -278,9 +278,9 @@ export const Skills = () => {
                   <span className="text-xl font-extrabold text-[#F2F2E9] mb-2 tracking-tight drop-shadow-sm text-center">{skill.name}</span>
                   <span className={`px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${skill.level === 'Intermediate' ? 'bg-[#7DD6C0] text-[#232526]' : 'bg-green-400 text-[#232526]'}`}>{skill.level}</span>
                   {/* Tooltip always visible on mobile */}
-                  <div className="mt-4 w-full bg-[#181A1B] text-[#F2F2E9] text-sm rounded-xl shadow-lg px-4 py-3 border border-[#7DD6C0]/40">
+                  <div className="mt-4 w-full bg-[#181A1B] text-[#F2F2E9] text-sm rounded-xl shadow-lg px-4 py-3 border border-[#7DD6C0]/40 hidden lg:flex">
                     <div className="flex items-center gap-2 mb-1 text-[#7DD6C0] font-bold"><Info size={16} />{skill.name}</div>
-                    <div>{skill.description}</div>
+                    <div className="hidden lg:block">{skill.description}</div>
                   </div>
                 </div>
               </SwiperSlideMobile>
